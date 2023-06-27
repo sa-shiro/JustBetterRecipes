@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "jbr",
+  "version": "1.0.1",
+
+  "name": "Jus Better Recipes",
+  "description": "A Datapack/Mod which adds TONS (over 3.000) of new and useful Vanilla recipes!",
+  "authors": [
+    "sashiro"
+  ],
+  "contact": {
+    "homepage": "https://curseforge.com/minecraft/mc-mods/just-better-recipes"
+  },
+
+  "license": "All Rights Reserved",
+  "icon": "assets/jbr/logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+  },
+
+  "depends": {
+    "fabric-resource-loader-v0": "*"
+  }
+}

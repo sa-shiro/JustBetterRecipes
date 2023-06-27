@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "net.sashiro",
+    "id": "jbr",
+    "version": "1.0.1",
+    "metadata": {
+      "name": "Just Better Recipes",
+      "description": "A Datapack/Mod which adds TONS (over 3.000) of new and useful Vanilla recipes!",
+      "contributors": {
+        "sashiro": "Owner"
+      },
+      "contact": {
+        "homepage": "https://curseforge.com/minecraft/mc-mods/just-better-recipes"
+      },
+      "icon": "pack.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_resource_loader",
+        "versions": "*",
+        "unless": "fabric-resource-loader-v0"
+      }
+    ]
+  }
+}
