@@ -8,7 +8,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.function.Consumer;
 
-@SuppressWarnings("DuplicatedCode")
+@SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenWoodRecipes extends RecipeProvider {
     public GenWoodRecipes(PackOutput packOutput) {
         super(packOutput);

@@ -1,7 +1,22 @@
 # Just Better Recipes
 is a DataPack / Mod which ads TONS (over 3.000 !!!) new useful Vanilla-friendly recipes.
 
-[![curseforge-dp]](https://curseforge.com/minecraft/customization/just-better-recipes-dp)&nbsp;&nbsp;[![curseforge-mod]](https://curseforge.com/minecraft/mc-mods/just-better-recipes)&nbsp;&nbsp;[![modrinth]](https://modrinth.com/datapack/just-better-recipes)&nbsp;&nbsp;[![github]]() [![discord]](https://discord.gg/EKyjXRH9xN)&nbsp;&nbsp;[![paypal]](https://www.paypal.com/donate/?cmd=_donations&business=social.sashiro@outlook.com&lc=US&item_name=Donation&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
+[![curseforge-dp]](https://curseforge.com/minecraft/customization/just-better-recipes-dp)&nbsp;&nbsp;[![curseforge-mod]](https://curseforge.com/minecraft/mc-mods/just-better-recipes)&nbsp;&nbsp;[![modrinth]](https://modrinth.com/datapack/just-better-recipes)&nbsp;&nbsp;[![github]](https://github.com/sa-shiro/JustBetterRecipes) [![discord]](https://discord.gg/EKyjXRH9xN)&nbsp;&nbsp;[![paypal]](https://www.paypal.com/donate/?cmd=_donations&business=social.sashiro@outlook.com&lc=US&item_name=Donation&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted)
+
+<details>
+<summary>Important, building from source</summary>
+
+```
+Don't use this project to build your own copy from source
+or the Mod Version won't be compatible with Minecraft <= 1.16  
+
+If you still want to build it from source: create 
+a Minecraft Forge <= 1.16 dev env and copy 
+the generated resources into the project and then build it
+
+as this project does not support building it with Java < 17
+```
+</details>
 
 [curseforge-dp]: https://img.shields.io/badge/DataPack-CurseForge-orange
 [curseforge-mod]: https://img.shields.io/badge/Mod-CurseForge-orange

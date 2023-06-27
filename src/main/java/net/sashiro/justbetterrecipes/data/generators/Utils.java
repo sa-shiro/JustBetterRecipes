@@ -13,15 +13,21 @@ import net.minecraft.world.level.block.Block;
 import javax.annotation.Nullable;
 import java.util.function.Consumer;
 
+@SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class Utils extends RecipeProvider {
     Utils(PackOutput p_248933_) {
         super(p_248933_);
     }
     
-    public static void generate(Consumer<FinishedRecipe> consumer, Block ingredient, Item dye, Block result, String group) {
+    public static void generateColor(Consumer<FinishedRecipe> consumer, Block ingredient, Item dye, Block result, String group) {
         String dyeName = dye.getDescriptionId().replace("item.minecraft.", "").replace("_dye", "");
         String groupName = dyeName + "_colored_" + group.toLowerCase();
         RecipeCategory recipeCategory = RecipeCategory.MISC;
+        
+        String modName = "JBR";
+        
+        if (ingredient.getDescriptionId().contains("wool") || ingredient.getDescriptionId().contains("carpet") || ingredient.getDescriptionId().contains("bed"))
+            modName = "JRB_OLD";
         
         if (ingredient.getDescriptionId().contains("concrete")
                 || ingredient.getDescriptionId().contains("terracotta")
@@ -36,7 +42,7 @@ public class Utils extends RecipeProvider {
                     .pattern("XXX")
                     .group(groupName)
                     .unlockedBy("has_item", RecipeProvider.has(ingredient))
-                    .save(consumer, new ResourceLocation("JBR".toLowerCase(), RecipeProvider.getConversionRecipeName(result, ingredient)));
+                    .save(consumer, new ResourceLocation(modName.toLowerCase(), RecipeProvider.getConversionRecipeName(result, ingredient)));
             
         } else {
             if (ingredient.getDescriptionId().contains("banner")
@@ -48,7 +54,7 @@ public class Utils extends RecipeProvider {
                     .requires(dye) // ingredient 2
                     .group(groupName)
                     .unlockedBy("has_item", has(ingredient))
-                    .save(consumer, new ResourceLocation("JBR".toLowerCase(), getConversionRecipeName(result, ingredient)));
+                    .save(consumer, new ResourceLocation(modName.toLowerCase(), getConversionRecipeName(result, ingredient)));
         }
     }
     
@@ -93,7 +99,7 @@ public class Utils extends RecipeProvider {
         String recipeName;
         
         if (recipeType == RecipeSerializer.BLASTING_RECIPE) recipeName = "_from_blasting";
-        if (recipeType == RecipeSerializer.SMOKING_RECIPE) recipeName = "_from_smoking";
+        else if (recipeType == RecipeSerializer.SMOKING_RECIPE) recipeName = "_from_smoking";
         else recipeName = "_from_smelting";
         
         if (group != null) {

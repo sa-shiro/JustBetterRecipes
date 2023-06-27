@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
-@SuppressWarnings("DuplicatedCode")
+@SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenRecipeProvider extends RecipeProvider {
     public GenRecipeProvider(PackOutput packOutput) {
         super(packOutput);
@@ -29,10 +29,9 @@ public class GenRecipeProvider extends RecipeProvider {
         GenTerracottaRecipes.generateRecipes(consumer);
         GenWoodRecipes.generateRecipes(consumer);
         
-        // disable for 1.20
-        //GenWoolRecipes.generateRecipes(consumer);
-        //GenCarpetRecipes.generateRecipes(consumer);
-        //GenBedRecipes.generateRecipes(consumer);
+        GenWoolRecipes.generateRecipes(consumer);
+        GenCarpetRecipes.generateRecipes(consumer);
+        GenBedRecipes.generateRecipes(consumer);
         
         // Warped Wart Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, WARPED_WART_BLOCK) // result
