@@ -15,6 +15,10 @@ a Minecraft Forge <= 1.16 dev env and copy
 the generated resources into the project and then build it
 
 as this project does not support building it with Java < 17
+
+if you build this project for Minecraft 1.20 and up,
+comment the Wool, Carpet and Bed Generator in [GenRecipeProvider.java]
+or delete the "jbr_old" folder from inside the final jar
 ```
 </details>
 
