@@ -11,7 +11,7 @@ Don't use this project to build your own copy from source
 or the Mod Version won't be compatible with Minecraft <= 1.16  
 
 If you still want to build it from source: create 
-a Minecraft Forge <= 1.16 dev env and copy 
+a Minecraft Forge <= 1.14 dev env and copy 
 the generated resources into the project and then build it
 
 as this project does not support building it with Java < 17
