@@ -1,29 +1,31 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenWoodRecipes extends RecipeProvider {
-    public GenWoodRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenWoodRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         // =============================================================================================================
         // [ Oak ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.OAK_LOG, Items.STRIPPED_OAK_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.OAK_LOG, Items.OAK_PLANKS, 4, RecipeCategory.MISC);
@@ -75,11 +77,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.OAK_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.OAK_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.OAK_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Dark Oak ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.DARK_OAK_LOG, Items.STRIPPED_DARK_OAK_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.DARK_OAK_LOG, Items.DARK_OAK_PLANKS, 4, RecipeCategory.MISC);
@@ -131,11 +133,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.DARK_OAK_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.DARK_OAK_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.DARK_OAK_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Spruce ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.SPRUCE_LOG, Items.STRIPPED_SPRUCE_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.SPRUCE_LOG, Items.SPRUCE_PLANKS, 4, RecipeCategory.MISC);
@@ -187,11 +189,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.SPRUCE_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.SPRUCE_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.SPRUCE_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Birch ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.BIRCH_LOG, Items.STRIPPED_BIRCH_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BIRCH_LOG, Items.BIRCH_PLANKS, 4, RecipeCategory.MISC);
@@ -243,11 +245,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.BIRCH_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BIRCH_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BIRCH_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Jungle ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.JUNGLE_LOG, Items.STRIPPED_JUNGLE_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.JUNGLE_LOG, Items.JUNGLE_PLANKS, 4, RecipeCategory.MISC);
@@ -299,11 +301,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.JUNGLE_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.JUNGLE_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.JUNGLE_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Acacia ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.ACACIA_LOG, Items.STRIPPED_ACACIA_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.ACACIA_LOG, Items.ACACIA_PLANKS, 4, RecipeCategory.MISC);
@@ -355,11 +357,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.ACACIA_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.ACACIA_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.ACACIA_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Mangrove ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.MANGROVE_LOG, Items.STRIPPED_MANGROVE_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.MANGROVE_LOG, Items.MANGROVE_PLANKS, 4, RecipeCategory.MISC);
@@ -411,11 +413,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.MANGROVE_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.MANGROVE_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.MANGROVE_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Cherry ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.CHERRY_LOG, Items.STRIPPED_CHERRY_LOG, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CHERRY_LOG, Items.CHERRY_PLANKS, 4, RecipeCategory.MISC);
@@ -467,11 +469,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.CHERRY_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CHERRY_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CHERRY_BOAT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Bamboo ] Wood Types
         // =============================================================================================================
-        
+
         // Block VARIANT
         Utils.generateStonecutting(consumer, Items.BAMBOO_BLOCK, Items.STRIPPED_BAMBOO_BLOCK, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BAMBOO_BLOCK, Items.BAMBOO_MOSAIC, 1, RecipeCategory.MISC);
@@ -527,11 +529,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.BAMBOO_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BAMBOO_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.BAMBOO_RAFT, Items.STICK, 8, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Crimson ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.CRIMSON_STEM, Items.STRIPPED_CRIMSON_STEM, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CRIMSON_STEM, Items.CRIMSON_PLANKS, 4, RecipeCategory.MISC);
@@ -580,11 +582,11 @@ public class GenWoodRecipes extends RecipeProvider {
         Utils.generateStonecutting(consumer, Items.CRIMSON_BUTTON, Items.STICK, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CRIMSON_SIGN, Items.STICK, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.CRIMSON_HANGING_SIGN, Items.STICK, 3, RecipeCategory.MISC);
-        
+
         // =============================================================================================================
         // [ Warped ] Wood Types
         // =============================================================================================================
-        
+
         // LOG VARIANT
         Utils.generateStonecutting(consumer, Items.WARPED_STEM, Items.STRIPPED_WARPED_STEM, 1, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.WARPED_STEM, Items.WARPED_PLANKS, 4, RecipeCategory.MISC);

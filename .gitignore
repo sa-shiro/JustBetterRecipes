@@ -19,11 +19,9 @@ build
 
 # other
 eclipse
-run/
-logs/
-/src/generated/resources/.cache/
-# Files from Forge MDK
-forge*changelog.txt
+run
+runs
+run-data
+**/generated
 
-
-/src/generated/
+repo

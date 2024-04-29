@@ -1,27 +1,28 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenConcreteRecipes extends RecipeProvider {
-    
-    public GenConcreteRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenConcreteRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.BLACK_DYE, BLACK_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -37,7 +38,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, WHITE_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.BLACK_DYE, BLACK_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -53,7 +54,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.BLACK_DYE, BLACK_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -69,7 +70,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GRAY_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -85,7 +86,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLACK_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -101,7 +102,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BROWN_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -117,7 +118,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, RED_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -133,7 +134,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, ORANGE_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -149,7 +150,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, YELLOW_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -165,7 +166,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIME_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -181,7 +182,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, GREEN_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -197,7 +198,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, CYAN_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -213,7 +214,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -229,7 +230,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, BLUE_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -245,7 +246,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.BLUE_DYE, BLUE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PURPLE_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -261,7 +262,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.BLUE_DYE, BLUE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, MAGENTA_CONCRETE_POWDER, Items.PINK_DYE, PINK_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.WHITE_DYE, WHITE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.GRAY_DYE, GRAY_CONCRETE_POWDER, "CONCRETE_POWDER");
@@ -277,7 +278,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.BLUE_DYE, BLUE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.PURPLE_DYE, PURPLE_CONCRETE_POWDER, "CONCRETE_POWDER");
         Utils.generateColor(consumer, PINK_CONCRETE_POWDER, Items.MAGENTA_DYE, MAGENTA_CONCRETE_POWDER, "CONCRETE_POWDER");
-        
+
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.BLACK_DYE, BLACK_CONCRETE, "CONCRETE");
@@ -293,7 +294,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, WHITE_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.BLACK_DYE, BLACK_CONCRETE, "CONCRETE");
@@ -309,7 +310,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_GRAY_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.BLACK_DYE, BLACK_CONCRETE, "CONCRETE");
@@ -325,7 +326,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GRAY_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -341,7 +342,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLACK_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -357,7 +358,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BROWN_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, RED_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, RED_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, RED_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -373,7 +374,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, RED_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, RED_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -389,7 +390,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, ORANGE_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -405,7 +406,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, YELLOW_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, LIME_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIME_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIME_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -421,7 +422,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIME_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIME_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -437,7 +438,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, GREEN_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -453,7 +454,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, CYAN_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -469,7 +470,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, LIGHT_BLUE_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -485,7 +486,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, BLUE_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -501,7 +502,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.BLUE_DYE, BLUE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.MAGENTA_DYE, MAGENTA_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PURPLE_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");
@@ -517,7 +518,7 @@ public class GenConcreteRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.BLUE_DYE, BLUE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.PURPLE_DYE, PURPLE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, MAGENTA_CONCRETE, Items.PINK_DYE, PINK_CONCRETE, "CONCRETE");
-        
+
         Utils.generateColor(consumer, PINK_CONCRETE, Items.WHITE_DYE, WHITE_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PINK_CONCRETE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CONCRETE, "CONCRETE");
         Utils.generateColor(consumer, PINK_CONCRETE, Items.GRAY_DYE, GRAY_CONCRETE, "CONCRETE");

@@ -1,27 +1,29 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenTerracottaRecipes extends RecipeProvider {
-    public GenTerracottaRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenTerracottaRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.BLACK_DYE, BLACK_TERRACOTTA, "TERRACOTTA");
@@ -37,7 +39,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, WHITE_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.BLACK_DYE, BLACK_TERRACOTTA, "TERRACOTTA");
@@ -53,7 +55,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.BLACK_DYE, BLACK_TERRACOTTA, "TERRACOTTA");
@@ -69,7 +71,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GRAY_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -85,7 +87,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLACK_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -101,7 +103,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BROWN_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -117,7 +119,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, RED_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -133,7 +135,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -149,7 +151,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -165,7 +167,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIME_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -181,7 +183,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, GREEN_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -197,7 +199,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, CYAN_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -213,7 +215,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -229,7 +231,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, BLUE_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -245,7 +247,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.BLUE_DYE, BLUE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -261,7 +263,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.BLUE_DYE, BLUE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_TERRACOTTA, Items.PINK_DYE, PINK_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.WHITE_DYE, WHITE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.GRAY_DYE, GRAY_TERRACOTTA, "TERRACOTTA");
@@ -277,7 +279,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.BLUE_DYE, BLUE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.PURPLE_DYE, PURPLE_TERRACOTTA, "TERRACOTTA");
         Utils.generateColor(consumer, PINK_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_TERRACOTTA, "TERRACOTTA");
-        
+
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.BLACK_DYE, BLACK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -293,7 +295,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, WHITE_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.BLACK_DYE, BLACK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -309,7 +311,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_GRAY_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.BLACK_DYE, BLACK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -325,7 +327,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GRAY_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -341,7 +343,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLACK_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -357,7 +359,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BROWN_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -373,7 +375,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, RED_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -389,7 +391,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, ORANGE_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -405,7 +407,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, YELLOW_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -421,7 +423,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIME_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -437,7 +439,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, GREEN_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -453,7 +455,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, CYAN_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -469,7 +471,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, LIGHT_BLUE_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -485,7 +487,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, BLUE_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -501,7 +503,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.BLUE_DYE, BLUE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PURPLE_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -517,7 +519,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.BLUE_DYE, BLUE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, MAGENTA_GLAZED_TERRACOTTA, Items.PINK_DYE, PINK_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.WHITE_DYE, WHITE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.GRAY_DYE, GRAY_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
@@ -533,7 +535,7 @@ public class GenTerracottaRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.BLUE_DYE, BLUE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.PURPLE_DYE, PURPLE_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
         Utils.generateColor(consumer, PINK_GLAZED_TERRACOTTA, Items.MAGENTA_DYE, MAGENTA_GLAZED_TERRACOTTA, "GLAZED_TERRACOTTA");
-        
+
         Utils.generateSmelting(consumer, "TERRACOTTA", Items.WHITE_TERRACOTTA, Items.WHITE_GLAZED_TERRACOTTA, RecipeSerializer.BLASTING_RECIPE, 0.5f);
         Utils.generateSmelting(consumer, "TERRACOTTA", Items.LIGHT_GRAY_TERRACOTTA, Items.LIGHT_GRAY_GLAZED_TERRACOTTA, RecipeSerializer.BLASTING_RECIPE, 0.5f);
         Utils.generateSmelting(consumer, "TERRACOTTA", Items.GRAY_TERRACOTTA, Items.GRAY_GLAZED_TERRACOTTA, RecipeSerializer.BLASTING_RECIPE, 0.5f);

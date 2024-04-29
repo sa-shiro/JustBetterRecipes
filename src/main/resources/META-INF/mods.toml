@@ -1,15 +1,11 @@
 modLoader = "javafml"
 loaderVersion = "[25,)"
 license = "All Rights Reserved"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/"
-[[mods]]
-modId = "jbr"
-version = "${file.jarVersion}"
-displayName = "Just Better Recipes"
-#updateJSONURL="https://change.me.example.invalid/updates.json"
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
-logoFile="pack.png"
-authors="sashiro"
-description = '''
 
-'''
+[[mods]]
+    modId = "jbr"
+    version = "${file.jarVersion}"
+    displayName = "Just Better Recipes"
+    logoFile="pack.png"
+    authors="sashiro"
+    description = '''Just Better Recipes'''

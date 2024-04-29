@@ -1,26 +1,28 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenCandleRecipes extends RecipeProvider {
-    public GenCandleRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenCandleRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         Utils.generateColor(consumer, WHITE_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, WHITE_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, WHITE_CANDLE, Items.BLACK_DYE, BLACK_CANDLE, "CANDLE");
@@ -36,7 +38,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, WHITE_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, WHITE_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.BLACK_DYE, BLACK_CANDLE, "CANDLE");
@@ -52,7 +54,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_GRAY_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, GRAY_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GRAY_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GRAY_CANDLE, Items.BLACK_DYE, BLACK_CANDLE, "CANDLE");
@@ -68,7 +70,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GRAY_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GRAY_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, BLACK_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLACK_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLACK_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -84,7 +86,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLACK_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLACK_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, BROWN_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BROWN_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BROWN_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -100,7 +102,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BROWN_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BROWN_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, RED_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, RED_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, RED_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -116,7 +118,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, RED_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, RED_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -132,7 +134,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, ORANGE_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -148,7 +150,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, YELLOW_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, LIME_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIME_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIME_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -164,7 +166,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIME_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIME_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, GREEN_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GREEN_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GREEN_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -180,7 +182,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GREEN_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, GREEN_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, CYAN_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, CYAN_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, CYAN_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -196,7 +198,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, CYAN_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, CYAN_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -212,7 +214,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, LIGHT_BLUE_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, BLUE_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLUE_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLUE_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -228,7 +230,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLUE_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, BLUE_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -244,7 +246,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.BLUE_DYE, BLUE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.MAGENTA_DYE, MAGENTA_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PURPLE_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");
@@ -260,7 +262,7 @@ public class GenCandleRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.BLUE_DYE, BLUE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.PURPLE_DYE, PURPLE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, MAGENTA_CANDLE, Items.PINK_DYE, PINK_CANDLE, "CANDLE");
-        
+
         Utils.generateColor(consumer, PINK_CANDLE, Items.WHITE_DYE, WHITE_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PINK_CANDLE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_CANDLE, "CANDLE");
         Utils.generateColor(consumer, PINK_CANDLE, Items.GRAY_DYE, GRAY_CANDLE, "CANDLE");

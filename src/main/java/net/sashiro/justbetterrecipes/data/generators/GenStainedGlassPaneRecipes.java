@@ -1,27 +1,29 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenStainedGlassPaneRecipes extends RecipeProvider {
-    public GenStainedGlassPaneRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenStainedGlassPaneRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.BLACK_DYE, BLACK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -37,7 +39,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, WHITE_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.BLACK_DYE, BLACK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -53,7 +55,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_GRAY_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.BLACK_DYE, BLACK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -69,7 +71,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GRAY_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -85,7 +87,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLACK_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -101,7 +103,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BROWN_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -117,7 +119,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, RED_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -133,7 +135,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, ORANGE_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -149,7 +151,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, YELLOW_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -165,7 +167,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIME_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -181,7 +183,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, GREEN_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -197,7 +199,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, CYAN_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -213,7 +215,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, LIGHT_BLUE_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -229,7 +231,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, BLUE_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -245,7 +247,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.BLUE_DYE, BLUE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PURPLE_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -261,7 +263,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.BLUE_DYE, BLUE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, MAGENTA_STAINED_GLASS_PANE, Items.PINK_DYE, PINK_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.WHITE_DYE, WHITE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.GRAY_DYE, GRAY_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
@@ -277,7 +279,7 @@ public class GenStainedGlassPaneRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.BLUE_DYE, BLUE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.PURPLE_DYE, PURPLE_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
         Utils.generateColor(consumer, PINK_STAINED_GLASS_PANE, Items.MAGENTA_DYE, MAGENTA_STAINED_GLASS_PANE, "STAINED_GLASS_PANE");
-        
+
         Utils.generateStonecutting(consumer, Items.WHITE_STAINED_GLASS, Items.WHITE_STAINED_GLASS_PANE, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.LIGHT_GRAY_STAINED_GLASS, Items.LIGHT_GRAY_STAINED_GLASS_PANE, 3, RecipeCategory.MISC);
         Utils.generateStonecutting(consumer, Items.GRAY_STAINED_GLASS, Items.GRAY_STAINED_GLASS_PANE, 3, RecipeCategory.MISC);

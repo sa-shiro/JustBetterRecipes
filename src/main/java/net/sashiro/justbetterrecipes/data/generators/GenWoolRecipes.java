@@ -1,26 +1,28 @@
 package net.sashiro.justbetterrecipes.data.generators;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
 @SuppressWarnings({"DuplicatedCode", "unused", "NullableProblems"})
 public class GenWoolRecipes extends RecipeProvider {
-    public GenWoolRecipes(PackOutput packOutput) {
-        super(packOutput);
+
+    public GenWoolRecipes(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
+        super(packOutput, provider);
     }
-    
+
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         generateRecipes(consumer);
     }
-    
-    public static void generateRecipes(Consumer<FinishedRecipe> consumer) {
+
+    public static void generateRecipes(RecipeOutput consumer) {
         Utils.generateColor(consumer, WHITE_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, WHITE_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, WHITE_WOOL, Items.BLACK_DYE, BLACK_WOOL, "WOOL");
@@ -36,7 +38,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, WHITE_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, WHITE_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, WHITE_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.BLACK_DYE, BLACK_WOOL, "WOOL");
@@ -52,7 +54,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_GRAY_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, GRAY_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, GRAY_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, GRAY_WOOL, Items.BLACK_DYE, BLACK_WOOL, "WOOL");
@@ -68,7 +70,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GRAY_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, GRAY_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, GRAY_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, BLACK_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, BLACK_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, BLACK_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -84,7 +86,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLACK_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, BLACK_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, BLACK_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, BROWN_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, BROWN_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, BROWN_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -100,7 +102,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BROWN_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, BROWN_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, BROWN_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, RED_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, RED_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, RED_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -116,7 +118,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, RED_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, RED_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, RED_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, ORANGE_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, ORANGE_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, ORANGE_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -132,7 +134,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, ORANGE_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, ORANGE_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, ORANGE_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, YELLOW_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, YELLOW_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, YELLOW_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -148,7 +150,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, YELLOW_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, YELLOW_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, YELLOW_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, LIME_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIME_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, LIME_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -164,7 +166,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIME_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIME_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, LIME_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, GREEN_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, GREEN_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, GREEN_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -180,7 +182,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, GREEN_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, GREEN_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, GREEN_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, CYAN_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, CYAN_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, CYAN_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -196,7 +198,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, CYAN_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, CYAN_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, CYAN_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -212,7 +214,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, LIGHT_BLUE_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, BLUE_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, BLUE_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, BLUE_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -228,7 +230,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, BLUE_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, BLUE_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, BLUE_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, PURPLE_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, PURPLE_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, PURPLE_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -244,7 +246,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, PURPLE_WOOL, Items.BLUE_DYE, BLUE_WOOL, "WOOL");
         Utils.generateColor(consumer, PURPLE_WOOL, Items.MAGENTA_DYE, MAGENTA_WOOL, "WOOL");
         Utils.generateColor(consumer, PURPLE_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
@@ -260,7 +262,7 @@ public class GenWoolRecipes extends RecipeProvider {
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.BLUE_DYE, BLUE_WOOL, "WOOL");
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.PURPLE_DYE, PURPLE_WOOL, "WOOL");
         Utils.generateColor(consumer, MAGENTA_WOOL, Items.PINK_DYE, PINK_WOOL, "WOOL");
-        
+
         Utils.generateColor(consumer, PINK_WOOL, Items.WHITE_DYE, WHITE_WOOL, "WOOL");
         Utils.generateColor(consumer, PINK_WOOL, Items.LIGHT_GRAY_DYE, LIGHT_GRAY_WOOL, "WOOL");
         Utils.generateColor(consumer, PINK_WOOL, Items.GRAY_DYE, GRAY_WOOL, "WOOL");
